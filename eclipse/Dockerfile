@@ -41,5 +41,4 @@ USER developer
 ENV HOME /home/developer
 WORKDIR /home/developer
 
-
 CMD /usr/local/bin/eclipse

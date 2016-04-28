@@ -4,6 +4,17 @@ services:
     build: mysql
     environment:
       MYSQL_ROOT_PASSWORD: 'password'
+  eclipse:
+    build: eclipse
+    depends_on:
+      - db
+      - sakai
+    environment:
+      - DISPLAY
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - .eclipse-docker:/home/developer
+      - .:/workspace
   sakai:
     build: sakai
     ports:
