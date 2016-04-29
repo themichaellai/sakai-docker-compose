@@ -25,7 +25,7 @@ Created Continuous Integration system with Jenkins that built Sakai image whenev
 #### How do you run it?
 Read the files in the below links to run both discrete parts of the project.
 
-[Jenkins](https://github.com/themichaellai/sakai-docker-compose/blob/master/Brian_Jenkins_Readme.txt)
+[Continuous Integration](https://github.com/themichaellai/sakai-docker-compose/blob/master/docker-continuous-integration-readme.md)
 
 [Docker Compose & Eclipse](https://github.com/themichaellai/sakai-docker-compose/blob/master/docker-compose-readme.md)
 
