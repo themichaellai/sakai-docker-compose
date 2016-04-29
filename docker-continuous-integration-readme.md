@@ -75,8 +75,7 @@ Add execute shell commands under Build where the github link below is your repo 
 ```bash
 rm -rf sakai-docker-compose
 git clone https://github.com/themichaellai/sakai-docker-compose.git 
-cd sakai-docker-compose
-cd sakai
+cd sakai-docker-compose/sakai
 sudo docker build -t sakai .
 cd ../..
 rm -rf sakai-docker-compose
