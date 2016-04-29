@@ -11,7 +11,7 @@ The Docker container is set off by changes pushed ot the main sakai repository
 
 
 Make sure you have Java-8 installed or oracle Jdk-8 above
-Create new Dockerfile: Add in below
+Create new Dockerfile: Add in below:
 
 FROM jenkins:1.596
  
