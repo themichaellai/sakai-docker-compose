@@ -12,7 +12,7 @@ images are not already built, then they will be built.
 
 An external MySQL server can be swapped in to substitute the instance of MySQL
 running in the container that Docker Compose launches. An example of this is in
-[docker-compose.override.yml](docker-compose.override.yml).
+[docker-compose.override.yml.example](docker-compose.override.yml.example).
 
 The Sakai container clones
 [sakaiproject/sakai](https://github.com/sakaiproject/sakai) when the container
