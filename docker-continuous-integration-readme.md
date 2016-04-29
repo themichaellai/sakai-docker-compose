@@ -5,6 +5,10 @@ Continuous Integration is complement that allows you to rebuild images whenever 
 
 Running Instructions to setup Docker CI
 ----------------------------------------------
+The Docker container is set off by changes pushed ot the main sakai repository 
+[sakaiproject/sakai](https://github.com/sakaiproject/sakai), Jenkins default builds this repository's Dockerfile on changes.
+
+
 
 Make sure you have Java-8 installed or oracle Jdk-8 above
 Create new Dockerfile
@@ -40,7 +44,7 @@ Then run
 docker run -d -v /var/run/docker.sock:/var/run/docker.sock \
                 -v $(which docker):/usr/bin/docker -p 5050:8080 myjenk
 
-                Go to localhost:5050
+Go to localhost:5050
 
 Manage Jenkins -> Manage Plugins and download Git, Github Plugin and add your repo
 Manage Jenkins -> Configure Security -> Enable Security -> Jenkin's own user database & Anyone can do anything
