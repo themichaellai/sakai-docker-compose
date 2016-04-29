@@ -1,5 +1,6 @@
 Docker Continuous Integration w/ Jenkins Setup Instructions
 ==============
+
 Make sure you have Java-8 installed or oracle Jdk-8 above
 Create new Dockerfile
 
