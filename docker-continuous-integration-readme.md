@@ -70,11 +70,11 @@ On build job, make sure to add the proper Github repo of the main sakai that is 
 
 Check "Trigger builds remotely" and add LONG_RANDOM_TOKEN as authentication token
 
-Add execute shell commands under Build
+Add execute shell commands under Build where the github link below is your repo with the Dockerfile
 
 ```bash
 rm -rf sakai-docker-compose
-git clone https://github.com/themichaellai/sakai-docker-compose.git <--- this is the link to your sakai Docker with Dockerfile
+git clone https://github.com/themichaellai/sakai-docker-compose.git 
 cd sakai-docker-compose
 cd sakai
 sudo docker build -t sakai .
