@@ -3,10 +3,10 @@ Docker Compose Continuous Integration w/ Jenkins
 
 Continuous Integration is complement that allows you to rebuild images whenever you push a new change to the main github repository for sakai. After a push or change is made, Jenkins will run Docker Compose to create a new docker image for sakai.
 
-Running Instructions to setup Docker CI
+Running Instructions to Setup Docker CI
 ----------------------------------------------
 The Docker container is set off by changes pushed ot the main sakai repository 
-[sakaiproject/sakai](https://github.com/sakaiproject/sakai), Jenkins default builds this repository's Dockerfile on changes.
+[sakaiproject/sakai](https://github.com/sakaiproject/sakai), Jenkins default builds this current repository's Dockerfile on changes.
 
 
 
