@@ -22,7 +22,7 @@ Integrated Eclipse IDE into the Docker-Compose files.
 
 Created Continuous Integration system with Jenkins that built Sakai image whenever new changes were pushed to the main repo. 
 
-#### How do you run it?
+#### How Does it Run?
 Read the files in the below links to run both discrete parts of the project.
 
 [Continuous Integration](https://github.com/themichaellai/sakai-docker-compose/blob/master/docker-continuous-integration-readme.md)
