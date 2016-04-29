@@ -40,7 +40,7 @@ Manage Jenkins -> Manage Plugins and download Git, Github Plugin and add your re
 Manage Jenkins -> Configure Security -> Enable Security -> Jenkin's own user database & Anyone can do anything
 
 Install latest version of ngrok and extract it. Change into the folder that it's extracted out in and run:
-./ngrok http 8080, mark down the new address that is created for your localhost:8080
+./ngrok http 5050, mark down the new address that is created for your localhost:5050
 
 Manage Jenkins -> Fill out Git user.name and user.email that you registered in the command line through 
 git config --global user.email = email@example.com
@@ -55,14 +55,14 @@ Check "Trigger builds remotely" and add LONG_RANDOM_TOKEN as authentication toke
 Add execute shell commands under Build
 
 rm -rf sakai-docker-compose
-git clone https://github.com/sakai.git/ <--- this is the link to your sakai Docker with Dockerfile
+git clone https://github.com/themichaellai/sakai-docker-compose.git <--- this is the link to your sakai Docker with Dockerfile
 cd sakai-docker-compose
 cd sakai
 sudo docker build -t sakai .
 cd ../..
 rm -rf sakai-docker-compose
 
-Go to Github, go to Settings tab under the main Github Repo, and click on Webhooks & Services and then add Webhook and then add the payload URL as webaddress.com/job/JOBNAME/build?token=LONG_RANDOM_TOKEN
+Go to Github, go to Settings tab under the main Github Repo, and click on Webhooks & Services and then add Webhook and then add the payload URL as Ngrokwebaddress.ngrok.io/job/JOBNAME/build?token=LONG_RANDOM_TOKEN
 
 Change content type to application/x-www-form-urlencoded
 
