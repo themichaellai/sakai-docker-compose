@@ -89,3 +89,6 @@ Change content type to application/x-www-form-urlencoded
 Press Send me everything.
 
 and check Active then update webhook. If everything went well you should have a working CI!
+Optional: 
+==========
+Make a dockerhub account and push the docker images to your account to keep track of Docker images without manually removing them
