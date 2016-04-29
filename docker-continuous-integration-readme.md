@@ -5,7 +5,7 @@ Continuous Integration is complement that allows you to rebuild images whenever 
 
 Running Instructions to Setup Docker CI
 ----------------------------------------------
-The Docker container is set off by changes pushed ot the main sakai repository 
+The Docker container is set off by changes pushed to the main sakai repository 
 [sakaiproject/sakai](https://github.com/sakaiproject/sakai), Jenkins default builds this current repository's Dockerfile on changes.
 
 
