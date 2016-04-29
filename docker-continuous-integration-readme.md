@@ -35,12 +35,12 @@ RUN sudo apt-get install -y libapparmor-dev
 then run `touch plugins.txt`
 
 Edit the file and add 
-```
+
 scm-api:latest
 git-client:latest
 git:latest
 greenballs:latest
-```
+
 
 Create the docker-image by running `docker build -t myjenk`.
 
@@ -59,10 +59,10 @@ Install latest version of ngrok and extract it. Change into the folder that it's
 `./ngrok http 5050`, mark down the new address that is created for your localhost:5050
 
 Manage Jenkins -> Fill out Git user.name and user.email that you registered in the command line through 
-```bash
+
 git config --global user.email = email@example.com
 git config --global user.name = "Random Name"
-```
+
 
 Make sure you have the Address of Jenkins as the ngrok address 
 
