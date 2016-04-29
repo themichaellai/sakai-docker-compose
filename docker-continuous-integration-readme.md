@@ -72,13 +72,12 @@ Check "Trigger builds remotely" and add LONG_RANDOM_TOKEN as authentication toke
 
 Add execute shell commands under Build where the github link below is your repo with the Dockerfile
 
+
+
 ```bash
 rm -rf sakai-docker-compose
 git clone https://github.com/themichaellai/sakai-docker-compose.git 
 sudo docker-compose up
-cd sakai-docker-compose/sakai
-sudo docker build -t sakai .
-cd ../..
 rm -rf sakai-docker-compose
 ```
 
