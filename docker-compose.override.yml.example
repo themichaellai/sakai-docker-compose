@@ -1,5 +1,5 @@
 version: '2'
 services:
-  web:
+  sakai:
     extra_hosts:
       - "db:8.8.8.8"

@@ -11,11 +11,15 @@ All of the containers can be run at the same using `docker-compose up`. If the
 images are not already built, then they will be built.
 
 An external MySQL server can be swapped in to substitute the instance of MySQL
-running in the container that Docker Compose launches. An example of this is in
-[docker-compose.override.yml.example](docker-compose.override.yml.example).
+running in the container that Docker Compose launches. This is done using a
+compose override file.An example of this is in
+[docker-compose.override.yml.example](docker-compose.override.yml.example). This
+is described in more detail in the [Docker documentation for extending compose
+files](https://docs.docker.com/compose/extends/).
 
 The Sakai container clones
 [sakaiproject/sakai](https://github.com/sakaiproject/sakai) when the container
 builds, but a
 [volume](https://docs.docker.com/engine/userguide/containers/dockervolumes/) can
-be used instead, to link the Sakai source files with the host machine.
+be used instead, to link the Sakai source files with the host machine. This will
+also save a minute or two in the build time.
