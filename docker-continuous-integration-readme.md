@@ -11,7 +11,7 @@ The Docker container is set off by changes pushed ot the main sakai repository
 
 
 Make sure you have Java-8 installed or oracle Jdk-8 above
-Create new Dockerfile
+Create new Dockerfile: Add in below
 
 FROM jenkins:1.596
  
@@ -28,6 +28,7 @@ COPY plugins.txt /usr/share/jenkins/plugins.txt
 RUN /usr/local/bin/plugins.sh /usr/share/jenkins/plugins.txt
 RUN sudo apt-get update
 RUN sudo apt-get install -y libapparmor-dev
+
 
 then run touch plugins.txt
 
