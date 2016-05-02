@@ -3,7 +3,9 @@ Docker Compose
 Docker Compose is a complement to Docker that allows one to easily manage
 multiple containers that comprise a single application. For a development
 environment for Sakai, we have three separate containers for Sakai and Tomcat,
-MySQL, and an IDE (Eclipse).
+MySQL, and an IDE (Eclipse). If any parts do not need to be used, then they can
+simply be removed by removing their corresponding sections in
+[`docker-compose.yml`](docker-compose.yml).
 
 Running
 -------
@@ -41,3 +43,17 @@ Dockerfile](https://github.com/themichaellai/sakai-docker-compose/blob/4a8813412
 Additional files can be added by adding the files in this repository, and adding
 the proper `ADD` command in the corresponding Dockerfile. When this is done,
 `docker-compose build` needs to be re-run in order to rebuild the images.
+
+IDE Integration
+---------------
+We have included a [Dockerfile for an IDE (Eclipse)](eclipse/Dockerfile) that
+will launch a full version of Eclipse Mars that should provide source editing
+capabilities. However, due to limitations of some of the plugins that come with
+Eclipse, features such as deploying to Tomcat from the editor are not possible
+when the containers containing Eclipse and Tomcat are separate, because the
+Eclipse Tomcat plugin expects Tomcat to be running on `localhost`. Therefore,
+the only way to fully integrate Eclipse and Tomcat/Sakai would be to add Eclipse
+to the same container as Tomcat. Alternatively, if source code sharing
+(mentioned in this same document) is used, then one can get a shell into the
+Tomcat/Sakai container by running `docker exec -it sakaidockercompose_sakai_1
+bash`, and using this to manually run Maven commands.
