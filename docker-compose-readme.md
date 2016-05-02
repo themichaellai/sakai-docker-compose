@@ -8,8 +8,13 @@ MySQL, and an IDE (Eclipse).
 Running
 -------
 All of the containers can be run at the same using `docker-compose up`. If the
-images are not already built, then they will be built.
+images are not already built, then they will be built. However, if changes to
+Dockerfiles are made and previous images have already been built,
+`docker-compose up` will not rebuild the images, and the old images will be
+used. `docker-compose build` can be used to rebuild them.
 
+Overrides
+---------
 An external MySQL server can be swapped in to substitute the instance of MySQL
 running in the container that Docker Compose launches. This is done using a
 compose override file.An example of this is in
@@ -17,9 +22,22 @@ compose override file.An example of this is in
 is described in more detail in the [Docker documentation for extending compose
 files](https://docs.docker.com/compose/extends/).
 
+Source Code
+-----------
 The Sakai container clones
 [sakaiproject/sakai](https://github.com/sakaiproject/sakai) when the container
 builds, but a
 [volume](https://docs.docker.com/engine/userguide/containers/dockervolumes/) can
 be used instead, to link the Sakai source files with the host machine. This will
 also save a minute or two in the build time.
+
+Configuration
+-------------
+Examples of configuration that can be changed is in
+[sakai/tomcat](sakai/tomcat). Configuration is added when the image is built,
+using [`ADD`](https://docs.docker.com/engine/reference/builder/#add). An example
+of this being used for Tomcat's `context.xml` can be found in the [Sakai
+Dockerfile](https://github.com/themichaellai/sakai-docker-compose/blob/4a88134126df567cd9f1e72cd4bb2e8a87589e2b/sakai/Dockerfile#L41).
+Additional files can be added by adding the files in this repository, and adding
+the proper `ADD` command in the corresponding Dockerfile. When this is done,
+`docker-compose build` needs to be re-run in order to rebuild the images.
