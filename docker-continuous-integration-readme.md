@@ -90,4 +90,13 @@ Press Send me everything.
 and check Active then update webhook. If everything went well you should have a working CI!
 Optional: 
 ==========
+Dockerhub
+----------
 Make a dockerhub account and push the docker images to your account to keep track of Docker images without manually removing them
+
+Security
+----------
+Manage Jenkins -> Enable Security -> Pick Jenkins own user database -> Check Allow users to sign up 
+Under Authorization pick Matrix-based security and add users, define securities and restrictions. Finally click save at the bottom.
+When you send the authentication in github with the webhook, you need to add USERNAME:PASSWORD@hostname/
+Press Save and you're done -> CAREFUL, if you uncheck authorization in the matrix you'll effectively lock yourself out so uncheck the authorization button last when you're setting up user configuration
